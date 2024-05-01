@@ -6,4 +6,4 @@
 [node name="World" instance=ExtResource("1_257da")]
 
 [node name="CharacterBody2D" parent="." index="0" instance=ExtResource("2_60e27")]
-position = Vector2(14, -16)
+position = Vector2(0, -17)
