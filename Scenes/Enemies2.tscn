@@ -1,41 +1,56 @@
-[gd_scene load_steps=8 format=3 uid="uid://u8aukskra4h1"]
+[gd_scene load_steps=11 format=3 uid="uid://u8aukskra4h1"]
 
-[ext_resource type="Texture2D" uid="uid://dra5wirm05cg3" path="res://Assets/Pixel Crawler - FREE - 1.8/Heroes/Knight/Idle/Idle-Sheet.png" id="1_hi3xl"]
+[ext_resource type="Script" path="res://Scripts/Enemies2.gd" id="1_3fl7f"]
+[ext_resource type="Texture2D" uid="uid://xrtltyy35qo6" path="res://Assets/Pixel Crawler - FREE - 1.8/Heroes/Knight/Run/Run-Sheet.png" id="1_jbg2y"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_wkis7"]
-atlas = ExtResource("1_hi3xl")
-region = Rect2(0, 0, 32, 32)
+[sub_resource type="AtlasTexture" id="AtlasTexture_rsqgv"]
+atlas = ExtResource("1_jbg2y")
+region = Rect2(0, 0, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_gd7x3"]
-atlas = ExtResource("1_hi3xl")
-region = Rect2(32, 0, 32, 32)
+[sub_resource type="AtlasTexture" id="AtlasTexture_1qd35"]
+atlas = ExtResource("1_jbg2y")
+region = Rect2(64, 0, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_e3i0e"]
-atlas = ExtResource("1_hi3xl")
-region = Rect2(64, 0, 32, 32)
+[sub_resource type="AtlasTexture" id="AtlasTexture_7lwyc"]
+atlas = ExtResource("1_jbg2y")
+region = Rect2(128, 0, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_xq0xx"]
-atlas = ExtResource("1_hi3xl")
-region = Rect2(96, 0, 32, 32)
+[sub_resource type="AtlasTexture" id="AtlasTexture_7lxdi"]
+atlas = ExtResource("1_jbg2y")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pyq1w"]
+atlas = ExtResource("1_jbg2y")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ncl4i"]
+atlas = ExtResource("1_jbg2y")
+region = Rect2(320, 0, 64, 64)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_gkjch"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_wkis7")
+"texture": SubResource("AtlasTexture_rsqgv")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_gd7x3")
+"texture": SubResource("AtlasTexture_1qd35")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_e3i0e")
+"texture": SubResource("AtlasTexture_7lwyc")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_xq0xx")
+"texture": SubResource("AtlasTexture_7lxdi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pyq1w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ncl4i")
 }],
 "loop": true,
-"name": &"Knight Enemy",
-"speed": 8.0
+"name": &"walk",
+"speed": 7.0
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_a4edc"]
@@ -43,12 +58,13 @@ radius = 12.0
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 position = Vector2(-83, -78)
+script = ExtResource("1_3fl7f")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_gkjch")
-animation = &"Knight Enemy"
-frame_progress = 0.299471
+animation = &"walk"
+frame_progress = 0.113571
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-1, 3)
+position = Vector2(1, 18)
 shape = SubResource("CircleShape2D_a4edc")
