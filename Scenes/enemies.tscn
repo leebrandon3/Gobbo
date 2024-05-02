@@ -29,6 +29,11 @@ region = Rect2(320, 0, 64, 64)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_07mgw"]
 animations = [{
+"frames": [],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_0wi18")
@@ -56,13 +61,12 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_ympuk"]
 radius = 13.1529
 
-[node name="CharacterBody2D" type="CharacterBody2D"]
+[node name="Knight Enemy" type="CharacterBody2D"]
 script = ExtResource("1_et6of")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_07mgw")
 animation = &"walk"
-frame_progress = 0.675695
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1, 19)
