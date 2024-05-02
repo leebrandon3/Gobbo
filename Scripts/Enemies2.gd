@@ -8,3 +8,5 @@ const SPEED = 60
 func _process(delta):
 	play_walk_animation()
 	position.x+=SPEED * delta
+	
+
