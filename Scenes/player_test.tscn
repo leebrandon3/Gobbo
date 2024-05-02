@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://jqh146hipm4y"]
+[gd_scene load_steps=7 format=3 uid="uid://jqh146hipm4y"]
 
 [ext_resource type="Script" path="res://Scripts/world.gd" id="1_0ey1o"]
 [ext_resource type="Texture2D" uid="uid://bynskkgvs35ir" path="res://Assets/Pixel Crawler - FREE - 1.8/Environment/Green Woods/Assets/Tiles.png" id="2_rnc7s"]
 [ext_resource type="PackedScene" uid="uid://bthkr3rxuqb7t" path="res://Scenes/player.tscn" id="3_uki6k"]
+[ext_resource type="PackedScene" uid="uid://drnrfysf0dkqj" path="res://Scenes/enemies.tscn" id="4_613b7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8grwi"]
 texture = ExtResource("2_rnc7s")
@@ -145,3 +146,6 @@ position = Vector2(-1, 0)
 
 [node name="Camera2D2" type="Camera2D" parent="Gobbo"]
 zoom = Vector2(2, 2)
+
+[node name="Knight Enemy" parent="." instance=ExtResource("4_613b7")]
+position = Vector2(294, 83)
