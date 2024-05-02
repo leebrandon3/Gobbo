@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" path="res://Scripts/world.gd" id="1_yf85a"]
 [ext_resource type="Texture2D" uid="uid://bynskkgvs35ir" path="res://Assets/Pixel Crawler - FREE - 1.8/Environment/Green Woods/Assets/Tiles.png" id="2_3k4s7"]
-[ext_resource type="PackedScene" uid="uid://cdc8yqx7oiuem" path="res://Scenes/large_tree.tscn" id="3_61jda"]
-[ext_resource type="PackedScene" uid="uid://duc4mevnnped3" path="res://Scenes/small_tree.tscn" id="4_klgh5"]
-[ext_resource type="PackedScene" uid="uid://c5hubgeuqr16e" path="res://Scenes/medium_tree.tscn" id="5_jqtwd"]
+[ext_resource type="PackedScene" uid="uid://cdc8yqx7oiuem" path="res://Scenes/World/Trees/large_tree.tscn" id="3_61jda"]
+[ext_resource type="PackedScene" uid="uid://duc4mevnnped3" path="res://Scenes/World/Trees/small_tree.tscn" id="4_klgh5"]
+[ext_resource type="PackedScene" uid="uid://c5hubgeuqr16e" path="res://Scenes/World/Trees/medium_tree.tscn" id="5_jqtwd"]
 [ext_resource type="PackedScene" uid="uid://bthkr3rxuqb7t" path="res://Scenes/player.tscn" id="6_e1gwe"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8grwi"]
