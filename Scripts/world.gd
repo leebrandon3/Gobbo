@@ -2,7 +2,7 @@ extends Node2D
 
 @onready var path_follow_2d = $Gobbo/Camera2D/Path2D/PathFollow2D
 
-@onready var timer = $Timer
+@onready var mob_timer = $"Mob Timer"
 
 @onready var clock_text = $"Gobbo/Camera2D/Clock Text"
 
@@ -23,6 +23,9 @@ func spawn_mob():
 # update the mob timer node.
 func mob_spawn_timeout():
 	spawn_mob()
+	if mob_timer.wait_time > 0.2:
+		mob_timer.wait_time -= 0.1
+	print(mob_timer.wait_time)
 
 # Clock function to add a second to the clock. Triggers every second.
 func clock_timeout():
