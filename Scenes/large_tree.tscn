@@ -1,0 +1,47 @@
+[gd_scene load_steps=5 format=3 uid="uid://cdc8yqx7oiuem"]
+
+[ext_resource type="Texture2D" uid="uid://bfjntfmb88l47" path="res://Assets/Pixel Crawler - FREE - 1.8/Environment/Green Woods/Assets/Trees.png" id="1_laxeh"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fft3q"]
+texture = ExtResource("1_laxeh")
+0:0/size_in_atlas = Vector2i(3, 6)
+0:0/0 = 0
+3:0/size_in_atlas = Vector2i(5, 8)
+3:0/0 = 0
+8:0/size_in_atlas = Vector2i(7, 8)
+8:0/0 = 0
+0:8/size_in_atlas = Vector2i(3, 6)
+0:8/0 = 0
+3:8/size_in_atlas = Vector2i(5, 8)
+3:8/0 = 0
+8:8/size_in_atlas = Vector2i(7, 8)
+8:8/0 = 0
+0:14/size_in_atlas = Vector2i(3, 2)
+0:14/0 = 0
+0:16/size_in_atlas = Vector2i(3, 2)
+0:16/0 = 0
+3:16/size_in_atlas = Vector2i(5, 2)
+3:16/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_y5vac"]
+sources/0 = SubResource("TileSetAtlasSource_fft3q")
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pqisv"]
+radius = 11.0
+height = 46.0
+
+[node name="Large Tree" type="StaticBody2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+position = Vector2(-8, -41)
+tile_set = SubResource("TileSet_y5vac")
+format = 2
+layer_0/name = "Background"
+layer_0/tile_data = PackedInt32Array(196608, 196608, 16)
+layer_1/name = "Foreground"
+layer_1/tile_data = PackedInt32Array(0, 524288, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 17)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_pqisv")
