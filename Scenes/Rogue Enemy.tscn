@@ -54,16 +54,18 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_a4edc"]
-radius = 12.0
+radius = 15.6525
 
 [node name="Rogue Enemy" type="CharacterBody2D"]
 position = Vector2(0, -15)
 script = ExtResource("1_3fl7f")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-4.5, 11)
+scale = Vector2(0.859375, 0.625)
 sprite_frames = SubResource("SpriteFrames_gkjch")
 animation = &"walk"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1, 15)
+position = Vector2(-5, 21)
 shape = SubResource("CircleShape2D_a4edc")
