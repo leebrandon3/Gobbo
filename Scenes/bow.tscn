@@ -23,6 +23,12 @@ rotation = 0.780322
 scale = Vector2(0.917674, 0.924608)
 texture = ExtResource("1_m3yaj")
 
-[node name="Shooting Point" type="Marker2D" parent="Bow Pivot/BowPNG"]
+[node name="ShootingPoint" type="Marker2D" parent="Bow Pivot/BowPNG"]
+unique_name_in_owner = true
 position = Vector2(-2.39994, 3.38258)
 rotation = -0.768
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

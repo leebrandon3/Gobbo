@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://84p1egdv8wsl"]
+
+[ext_resource type="Script" path="res://Scripts/Arrow.gd" id="1_nlmsl"]
+[ext_resource type="Texture2D" uid="uid://d1gwiwf7mju2v" path="res://Assets/Kyrise's 16x16 RPG Icon Pack - V1.3/icons/16x16/arrow_01e.png" id="2_rrle7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7x27k"]
+size = Vector2(22, 8)
+
+[node name="Arrow" type="Area2D"]
+top_level = true
+rotation = 0.632447
+collision_layer = 0
+collision_mask = 3
+script = ExtResource("1_nlmsl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2, 2)
+shape = SubResource("RectangleShape2D_7x27k")
+
+[node name="Arrow01e" type="Sprite2D" parent="."]
+position = Vector2(1, 2)
+rotation = 2.38114
+texture = ExtResource("2_rrle7")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
