@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://Scripts/bow.gd" id="1_tk1b8"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_fw0r8"]
-radius = 122.495
+radius = 226.035
 
 [node name="Bow" type="Area2D"]
 collision_layer = 0
@@ -15,6 +15,7 @@ script = ExtResource("1_tk1b8")
 shape = SubResource("CircleShape2D_fw0r8")
 
 [node name="Bow Pivot" type="Marker2D" parent="."]
+rotation = 3.16523
 
 [node name="BowPNG" type="Sprite2D" parent="Bow Pivot"]
 position = Vector2(-14, -1)
