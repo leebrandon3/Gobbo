@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://bhlngwm6et8m6"]
+
+[ext_resource type="Texture2D" uid="uid://dl33jkpupove8" path="res://Assets/Kyrise's 16x16 RPG Icon Pack - V1.3/icons/16x16/bow_01a.png" id="1_m3yaj"]
+[ext_resource type="Script" path="res://Scripts/bow.gd" id="1_tk1b8"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fw0r8"]
+radius = 122.495
+
+[node name="Bow" type="Area2D"]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("1_tk1b8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_fw0r8")
+
+[node name="Bow Pivot" type="Marker2D" parent="."]
+
+[node name="BowPNG" type="Sprite2D" parent="Bow Pivot"]
+position = Vector2(-14, -1)
+rotation = 0.780322
+scale = Vector2(0.917674, 0.924608)
+texture = ExtResource("1_m3yaj")
+
+[node name="Shooting Point" type="Marker2D" parent="Bow Pivot/BowPNG"]
+position = Vector2(-2.39994, 3.38258)
+rotation = -0.768
