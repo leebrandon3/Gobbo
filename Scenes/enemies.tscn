@@ -1,7 +1,32 @@
-[gd_scene load_steps=11 format=3 uid="uid://drnrfysf0dkqj"]
+[gd_scene load_steps=18 format=3 uid="uid://drnrfysf0dkqj"]
 
 [ext_resource type="Script" path="res://Scripts/enemies.gd" id="1_et6of"]
 [ext_resource type="Texture2D" uid="uid://xrtltyy35qo6" path="res://Assets/Pixel Crawler - FREE - 1.8/Heroes/Knight/Run/Run-Sheet.png" id="1_l5ndn"]
+[ext_resource type="Texture2D" uid="uid://t8bh2cpgkiyb" path="res://Assets/Pixel Crawler - FREE - 1.8/Heroes/Knight/Death/Death-Sheet.png" id="2_jqubs"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mncgo"]
+atlas = ExtResource("2_jqubs")
+region = Rect2(0, 0, 46, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1tqiy"]
+atlas = ExtResource("2_jqubs")
+region = Rect2(47, 0, 46, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2084k"]
+atlas = ExtResource("2_jqubs")
+region = Rect2(94, 0, 46, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hcgd3"]
+atlas = ExtResource("2_jqubs")
+region = Rect2(141, 0, 46, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jobh0"]
+atlas = ExtResource("2_jqubs")
+region = Rect2(188, 0, 46, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ikuo7"]
+atlas = ExtResource("2_jqubs")
+region = Rect2(235, 0, 46, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0wi18"]
 atlas = ExtResource("1_l5ndn")
@@ -29,9 +54,27 @@ region = Rect2(320, 0, 64, 64)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_07mgw"]
 animations = [{
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mncgo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1tqiy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2084k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hcgd3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jobh0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ikuo7")
+}],
 "loop": true,
-"name": &"new_animation",
+"name": &"death",
 "speed": 5.0
 }, {
 "frames": [{
@@ -58,16 +101,20 @@ animations = [{
 "speed": 7.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_ympuk"]
-radius = 13.1529
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0q07w"]
+radius = 7.0
+height = 26.0
 
 [node name="Knight Enemy" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 3
 script = ExtResource("1_et6of")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_07mgw")
 animation = &"walk"
+frame_progress = 0.994126
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1, 19)
-shape = SubResource("CircleShape2D_ympuk")
+position = Vector2(0, 16)
+shape = SubResource("CapsuleShape2D_0q07w")
