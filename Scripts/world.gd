@@ -1,11 +1,10 @@
 extends Node2D
 
-@onready var path_follow_2d = $CharacterBody2D/Camera2D/Path2D/PathFollow2D
+@onready var path_follow_2d = $Gobbo/Camera2D/Path2D/PathFollow2D
 
 @onready var timer = $Timer
 
-@onready var clock_text = $"CharacterBody2D/Camera2D/Clock Text"
-
+@onready var clock_text = $"Gobbo/Camera2D/Clock Text"
 
 var seconds = 0
 var time = {
