@@ -8,9 +8,10 @@ size = Vector2(22, 8)
 
 [node name="Arrow" type="Area2D"]
 top_level = true
-rotation = 0.632447
+rotation = 6.22579
+scale = Vector2(0.742469, 0.804854)
 collision_layer = 0
-collision_mask = 3
+collision_mask = 2
 script = ExtResource("1_nlmsl")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

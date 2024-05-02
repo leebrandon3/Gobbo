@@ -3,17 +3,16 @@ extends Area2D
 var travelled_distance = 0
 
 func _physics_process(delta):
-	const SPEED = 700
-	const RANGE = 1300
+	const SPEED = 240
+	const RANGE = 550
 	
-	var direction = Vector2.RIGHT.rotated(rotation)
+	var direction = Vector2.LEFT.rotated(rotation)
 	position += direction * SPEED * delta
 
 	travelled_distance += SPEED * delta
 	if travelled_distance > RANGE:
 		queue_free()
 		
-
 
 func _on_body_entered(body):
 	queue_free()
