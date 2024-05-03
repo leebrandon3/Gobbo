@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://bji2g768yrsq0"]
+[gd_scene load_steps=13 format=3 uid="uid://bji2g768yrsq0"]
 
 [ext_resource type="Script" path="res://Scripts/world.gd" id="1_yf85a"]
 [ext_resource type="Texture2D" uid="uid://bynskkgvs35ir" path="res://Assets/Pixel Crawler - FREE - 1.8/Environment/Green Woods/Assets/Tiles.png" id="2_3k4s7"]
@@ -6,6 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://duc4mevnnped3" path="res://Scenes/World/Trees/small_tree.tscn" id="4_klgh5"]
 [ext_resource type="PackedScene" uid="uid://c5hubgeuqr16e" path="res://Scenes/World/Trees/medium_tree.tscn" id="5_jqtwd"]
 [ext_resource type="PackedScene" uid="uid://bthkr3rxuqb7t" path="res://Scenes/player.tscn" id="6_e1gwe"]
+[ext_resource type="Script" path="res://Scripts/ProgressBar.gd" id="7_vanm8"]
+[ext_resource type="Script" path="res://Scripts/Label.gd" id="8_ooo6e"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8grwi"]
 texture = ExtResource("2_3k4s7")
@@ -140,6 +142,8 @@ _data = {
 "points": PackedVector2Array(0, 0, 0, 0, -320, -192, 0, 0, 0, 0, 320, -192, 0, 0, 0, 0, 320, 192, 0, 0, 0, 0, -320, 192, 0, 0, 0, 0, -320, -192)
 }
 point_count = 5
+
+[sub_resource type="Theme" id="Theme_u1dj2"]
 
 [node name="World" type="Node2D"]
 script = ExtResource("1_yf85a")
@@ -371,7 +375,7 @@ position = Vector2(440, -472)
 [node name="Gobbo" parent="." instance=ExtResource("6_e1gwe")]
 
 [node name="Camera2D" type="Camera2D" parent="Gobbo"]
-zoom = Vector2(3, 3)
+zoom = Vector2(2, 2)
 
 [node name="Path2D" type="Path2D" parent="Gobbo/Camera2D"]
 curve = SubResource("Curve2D_1b8lc")
@@ -387,8 +391,32 @@ offset_right = -128.0
 offset_bottom = -96.0
 text = "00 : 00"
 
+[node name="ProgressBar" type="ProgressBar" parent="Gobbo/Camera2D"]
+z_index = 10
+offset_left = -192.0
+offset_top = -93.0
+offset_right = -69.0
+offset_bottom = -84.0
+theme = SubResource("Theme_u1dj2")
+value = 100.0
+show_percentage = false
+script = ExtResource("7_vanm8")
+
+[node name="Label" type="Label" parent="Gobbo/Camera2D"]
+offset_left = -63.0
+offset_top = -139.0
+offset_right = 63.0
+offset_bottom = -116.0
+script = ExtResource("8_ooo6e")
+
+[node name="Label" type="Label" parent="Gobbo"]
+offset_left = -255.0
+offset_top = -101.0
+offset_right = -203.0
+offset_bottom = -78.0
+text = "Health:"
+
 [node name="Mob Timer" type="Timer" parent="."]
-wait_time = 3.0
 autostart = true
 
 [node name="Clock Timer" type="Timer" parent="."]
@@ -397,7 +425,10 @@ autostart = true
 [node name="Small Tree3" parent="." instance=ExtResource("4_klgh5")]
 position = Vector2(-528, -64)
 
-[node name="Node" type="Node" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
 
+[connection signal="death" from="Gobbo" to="." method="_on_gobbo_death"]
+[connection signal="death" from="Gobbo" to="Gobbo/Camera2D/Label" method="_on_gobbo_death"]
+[connection signal="health_updated" from="Gobbo" to="Gobbo/Camera2D/ProgressBar" method="_on_gobbo_health_updated"]
 [connection signal="timeout" from="Mob Timer" to="." method="mob_spawn_timeout"]
 [connection signal="timeout" from="Clock Timer" to="." method="clock_timeout"]

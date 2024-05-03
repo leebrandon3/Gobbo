@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://bthkr3rxuqb7t"]
+[gd_scene load_steps=25 format=3 uid="uid://bthkr3rxuqb7t"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_04stp"]
 [ext_resource type="Texture2D" uid="uid://d2xd3kryg7rpv" path="res://Assets/Pixel Crawler - FREE - 1.8/Enemy/Orc Crew/Orc - Rogue/Death/Death-Sheet.png" id="1_w0krc"]
@@ -91,7 +91,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_yjg7g")
 }],
-"loop": true,
+"loop": false,
 "name": &"death",
 "speed": 6.0
 }, {
@@ -140,14 +140,18 @@ animations = [{
 radius = 3.0
 height = 22.0
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3eo43"]
+radius = 4.0
+height = 24.0
+
 [node name="Gobbo" type="CharacterBody2D"]
 script = ExtResource("1_04stp")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_b7qjr")
-animation = &"idle"
+animation = &"death"
 autoplay = "idle"
-frame_progress = 0.0852548
+frame_progress = 0.793011
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 1)
@@ -155,3 +159,13 @@ shape = SubResource("CapsuleShape2D_fc4nv")
 
 [node name="Bow" parent="." instance=ExtResource("5_jless")]
 position = Vector2(0, 4)
+
+[node name="HurtBox" type="Area2D" parent="."]
+unique_name_in_owner = true
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
+position = Vector2(0, 1)
+shape = SubResource("CapsuleShape2D_3eo43")
+debug_color = Color(0.973165, 0.13458, 0.241487, 0.42)

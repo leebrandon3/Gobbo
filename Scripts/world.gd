@@ -6,6 +6,8 @@ extends Node2D
 
 @onready var clock_text = $"Gobbo/Camera2D/Clock Text"
 
+var player_alive = true
+
 func _ready():
 	randomize()
 
@@ -32,10 +34,11 @@ func spawn_mob():
 # Mob Timer triggers "mob_spawn_timeout" function. spawning mob. To update spawn frequency
 # update the mob timer node.
 func mob_spawn_timeout():
-	spawn_mob()
-	if mob_timer.wait_time > 0.2:
-		mob_timer.wait_time -= 0.05
-	print(mob_timer.wait_time)
+	if player_alive == true:
+		spawn_mob()
+		if mob_timer.wait_time > 0.2:
+			mob_timer.wait_time -= 0.05
+		print(mob_timer.wait_time)
 
 # Clock function to add a second to the clock. Triggers every second.
 func clock_timeout():
@@ -50,3 +53,6 @@ func seconds_conversion():
 	if len(time["seconds"]) == 1:
 		time["seconds"] = str("0", time["seconds"])
 	clock_text.text = str(time["minutes"], " : ", time["seconds"])
+
+func _on_gobbo_death():
+	player_alive = false
