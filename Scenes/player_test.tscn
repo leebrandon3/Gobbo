@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Scripts/world.gd" id="1_0ey1o"]
 [ext_resource type="Texture2D" uid="uid://bynskkgvs35ir" path="res://Assets/Pixel Crawler - FREE - 1.8/Environment/Green Woods/Assets/Tiles.png" id="2_rnc7s"]
 [ext_resource type="PackedScene" uid="uid://bthkr3rxuqb7t" path="res://Scenes/player.tscn" id="3_uki6k"]
-[ext_resource type="PackedScene" uid="uid://drnrfysf0dkqj" path="res://Scenes/enemies.tscn" id="4_613b7"]
+[ext_resource type="PackedScene" uid="uid://drnrfysf0dkqj" path="res://Scenes/Enemies/enemies.tscn" id="4_613b7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8grwi"]
 texture = ExtResource("2_rnc7s")
