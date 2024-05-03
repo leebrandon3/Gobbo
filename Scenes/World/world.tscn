@@ -371,7 +371,7 @@ position = Vector2(440, -472)
 [node name="Gobbo" parent="." instance=ExtResource("6_e1gwe")]
 
 [node name="Camera2D" type="Camera2D" parent="Gobbo"]
-zoom = Vector2(2, 2)
+zoom = Vector2(3, 3)
 
 [node name="Path2D" type="Path2D" parent="Gobbo/Camera2D"]
 curve = SubResource("Curve2D_1b8lc")

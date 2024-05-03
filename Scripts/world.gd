@@ -6,6 +6,9 @@ extends Node2D
 
 @onready var clock_text = $"Gobbo/Camera2D/Clock Text"
 
+func _ready():
+	randomize()
+
 var seconds = 0
 var time = {
 	"minutes" : 0,
@@ -15,16 +18,23 @@ var time = {
 # Mob spawning function
 func spawn_mob():
 	var new_soldier = preload("res://Scenes/enemies.tscn").instantiate()
+	var new_rogue = preload("res://Scenes/Rogue Enemy.tscn").instantiate()
+	var mobs = {
+		"soldier" : new_soldier,
+		"rogue" : new_rogue
+	}
 	path_follow_2d.progress_ratio = randf()
-	new_soldier.global_position = path_follow_2d.global_position
-	add_child(new_soldier)
+	var random_enemy = mobs.values()[randi() % mobs.size()]
+	random_enemy.global_position = path_follow_2d.global_position
+	print(str(random_enemy))
+	add_child(random_enemy)
 
 # Mob Timer triggers "mob_spawn_timeout" function. spawning mob. To update spawn frequency
 # update the mob timer node.
 func mob_spawn_timeout():
 	spawn_mob()
 	if mob_timer.wait_time > 0.2:
-		mob_timer.wait_time -= 0.1
+		mob_timer.wait_time -= 0.05
 	print(mob_timer.wait_time)
 
 # Clock function to add a second to the clock. Triggers every second.
