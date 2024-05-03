@@ -1,7 +1,32 @@
-[gd_scene load_steps=11 format=3 uid="uid://u8aukskra4h1"]
+[gd_scene load_steps=18 format=3 uid="uid://u8aukskra4h1"]
 
 [ext_resource type="Script" path="res://Scripts/Enemies2.gd" id="1_3fl7f"]
+[ext_resource type="Texture2D" uid="uid://baey64fvxcgi0" path="res://Assets/Pixel Crawler - FREE - 1.8/Heroes/Rogue/Death/Death-Sheet.png" id="2_7telu"]
 [ext_resource type="Texture2D" uid="uid://ba3xrvdfhp7to" path="res://Assets/Pixel Crawler - FREE - 1.8/Heroes/Rogue/Run/Run-Sheet.png" id="2_7ul5m"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xjy70"]
+atlas = ExtResource("2_7telu")
+region = Rect2(64, 0, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nkm8u"]
+atlas = ExtResource("2_7telu")
+region = Rect2(0, 0, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8bkvu"]
+atlas = ExtResource("2_7telu")
+region = Rect2(128, 0, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ppa03"]
+atlas = ExtResource("2_7telu")
+region = Rect2(192, 0, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8gx1f"]
+atlas = ExtResource("2_7telu")
+region = Rect2(256, 0, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vhib2"]
+atlas = ExtResource("2_7telu")
+region = Rect2(320, 0, 64, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_866wq"]
 atlas = ExtResource("2_7ul5m")
@@ -31,6 +56,29 @@ region = Rect2(320, 0, 64, 64)
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_xjy70")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nkm8u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8bkvu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ppa03")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8gx1f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vhib2")
+}],
+"loop": true,
+"name": &"death",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_866wq")
 }, {
 "duration": 1.0,
@@ -58,13 +106,16 @@ radius = 15.6525
 
 [node name="Rogue Enemy" type="CharacterBody2D"]
 position = Vector2(0, -15)
+collision_layer = 2
+collision_mask = 3
 script = ExtResource("1_3fl7f")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(-4.5, 11)
 scale = Vector2(0.859375, 0.625)
 sprite_frames = SubResource("SpriteFrames_gkjch")
-animation = &"walk"
+animation = &"death"
+frame_progress = 0.667569
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-5, 21)
