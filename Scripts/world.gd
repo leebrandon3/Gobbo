@@ -14,7 +14,7 @@ var time = {
 
 # Mob spawning function
 func spawn_mob():
-	var new_soldier = preload("res://Scenes/Enemies/enemies.tscn").instantiate()
+	var new_soldier = preload("res://Scenes/enemies.tscn").instantiate()
 	path_follow_2d.progress_ratio = randf()
 	new_soldier.global_position = path_follow_2d.global_position
 	add_child(new_soldier)
