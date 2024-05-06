@@ -6,6 +6,8 @@ signal death
 @onready var animated_sprite_2d = $AnimatedSprite2D
 @onready var bow = $Bow
 
+@export var inventory: Card_Menu
+
 var MAX_HEALTH = 100.0
 var current_health = 100.0
 const DAMAGE_RATE = 30.0
@@ -46,4 +48,6 @@ func _physics_process(delta):
 			animated_sprite_2d.play("death")
 			death.emit()
 			bow.queue_free()
-	
+
+func collect(card):
+	inventory.insert(card)
