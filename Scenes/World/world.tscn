@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://bji2g768yrsq0"]
+[gd_scene load_steps=14 format=3 uid="uid://bji2g768yrsq0"]
 
 [ext_resource type="Script" path="res://Scripts/world.gd" id="1_yf85a"]
 [ext_resource type="Texture2D" uid="uid://bynskkgvs35ir" path="res://Assets/Pixel Crawler - FREE - 1.8/Environment/Green Woods/Assets/Tiles.png" id="2_3k4s7"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://bthkr3rxuqb7t" path="res://Scenes/Player/player.tscn" id="6_e1gwe"]
 [ext_resource type="Script" path="res://Scripts/ProgressBar.gd" id="7_vanm8"]
 [ext_resource type="Script" path="res://Scripts/Label.gd" id="8_ooo6e"]
+[ext_resource type="PackedScene" uid="uid://cw0a3qnmemxl0" path="res://Scenes/Player/Card_Menu/card_menu_UI.tscn" id="9_jpsmm"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8grwi"]
 texture = ExtResource("2_3k4s7")
@@ -417,6 +418,14 @@ offset_top = -101.0
 offset_right = -199.0
 offset_bottom = -78.0
 text = "Health:"
+
+[node name="CardMenuUi" parent="Gobbo/Camera2D" instance=ExtResource("9_jpsmm")]
+process_mode = 3
+z_index = 12
+offset_left = -192.0
+offset_top = -144.0
+offset_right = 576.0
+offset_bottom = 384.0
 
 [node name="Mob Timer" type="Timer" parent="."]
 autostart = true
