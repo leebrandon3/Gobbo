@@ -1,55 +1,55 @@
 [gd_scene load_steps=18 format=3 uid="uid://u8aukskra4h1"]
 
-[ext_resource type="Script" path="res://Scripts/Enemies2.gd" id="1_3fl7f"]
-[ext_resource type="Texture2D" uid="uid://baey64fvxcgi0" path="res://Assets/Pixel Crawler - FREE - 1.8/Heroes/Rogue/Death/Death-Sheet.png" id="2_7telu"]
-[ext_resource type="Texture2D" uid="uid://ba3xrvdfhp7to" path="res://Assets/Pixel Crawler - FREE - 1.8/Heroes/Rogue/Run/Run-Sheet.png" id="2_7ul5m"]
+[ext_resource type="Script" path="res://Scripts/Enemies2.gd" id="1_2ojtj"]
+[ext_resource type="Texture2D" uid="uid://baey64fvxcgi0" path="res://Assets/Pixel Crawler - FREE - 1.8/Heroes/Rogue/Death/Death-Sheet.png" id="2_ejmy0"]
+[ext_resource type="Texture2D" uid="uid://ba3xrvdfhp7to" path="res://Assets/Pixel Crawler - FREE - 1.8/Heroes/Rogue/Run/Run-Sheet.png" id="3_upk4h"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xjy70"]
-atlas = ExtResource("2_7telu")
+atlas = ExtResource("2_ejmy0")
 region = Rect2(64, 0, 64, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nkm8u"]
-atlas = ExtResource("2_7telu")
+atlas = ExtResource("2_ejmy0")
 region = Rect2(0, 0, 64, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8bkvu"]
-atlas = ExtResource("2_7telu")
+atlas = ExtResource("2_ejmy0")
 region = Rect2(128, 0, 64, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ppa03"]
-atlas = ExtResource("2_7telu")
+atlas = ExtResource("2_ejmy0")
 region = Rect2(192, 0, 64, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8gx1f"]
-atlas = ExtResource("2_7telu")
+atlas = ExtResource("2_ejmy0")
 region = Rect2(256, 0, 64, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vhib2"]
-atlas = ExtResource("2_7telu")
+atlas = ExtResource("2_ejmy0")
 region = Rect2(320, 0, 64, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_866wq"]
-atlas = ExtResource("2_7ul5m")
+atlas = ExtResource("3_upk4h")
 region = Rect2(0, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qq0sa"]
-atlas = ExtResource("2_7ul5m")
+atlas = ExtResource("3_upk4h")
 region = Rect2(64, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nh4b6"]
-atlas = ExtResource("2_7ul5m")
+atlas = ExtResource("3_upk4h")
 region = Rect2(128, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vpjh0"]
-atlas = ExtResource("2_7ul5m")
+atlas = ExtResource("3_upk4h")
 region = Rect2(192, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_haxq4"]
-atlas = ExtResource("2_7ul5m")
+atlas = ExtResource("3_upk4h")
 region = Rect2(256, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_v516g"]
-atlas = ExtResource("2_7ul5m")
+atlas = ExtResource("3_upk4h")
 region = Rect2(320, 0, 64, 64)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_gkjch"]
@@ -108,15 +108,17 @@ radius = 15.6525
 position = Vector2(0, -15)
 collision_layer = 2
 collision_mask = 3
-script = ExtResource("1_3fl7f")
+script = ExtResource("1_2ojtj")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(-4.5, 11)
 scale = Vector2(0.859375, 0.625)
 sprite_frames = SubResource("SpriteFrames_gkjch")
 animation = &"death"
-frame_progress = 0.667569
+frame_progress = 0.687502
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-5, 21)
+position = Vector2(-1, 16)
 shape = SubResource("CircleShape2D_a4edc")
+
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
