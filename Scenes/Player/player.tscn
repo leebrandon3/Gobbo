@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://d2xd3kryg7rpv" path="res://Assets/Pixel Crawler - FREE - 1.8/Enemy/Orc Crew/Orc - Rogue/Death/Death-Sheet.png" id="1_w0krc"]
 [ext_resource type="Texture2D" uid="uid://dctovylrxyao7" path="res://Assets/Pixel Crawler - FREE - 1.8/Enemy/Orc Crew/Orc - Rogue/Idle/Idle-Sheet.png" id="2_2akoo"]
 [ext_resource type="Texture2D" uid="uid://b35swtfhjutmh" path="res://Assets/Pixel Crawler - FREE - 1.8/Enemy/Orc Crew/Orc - Rogue/Run/Run-Sheet.png" id="3_irsww"]
-[ext_resource type="PackedScene" uid="uid://bhlngwm6et8m6" path="res://Scenes/bow.tscn" id="5_jless"]
+[ext_resource type="PackedScene" uid="uid://bhlngwm6et8m6" path="res://Scenes/Player/bow.tscn" id="5_jless"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_w4ysx"]
 atlas = ExtResource("1_w0krc")
@@ -148,6 +148,7 @@ height = 24.0
 script = ExtResource("1_04stp")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -7)
 sprite_frames = SubResource("SpriteFrames_b7qjr")
 animation = &"death"
 autoplay = "idle"
@@ -158,7 +159,7 @@ position = Vector2(0, 1)
 shape = SubResource("CapsuleShape2D_fc4nv")
 
 [node name="Bow" parent="." instance=ExtResource("5_jless")]
-position = Vector2(0, 4)
+position = Vector2(0, -2)
 
 [node name="HurtBox" type="Area2D" parent="."]
 unique_name_in_owner = true

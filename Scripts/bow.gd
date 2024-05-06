@@ -9,7 +9,7 @@ func _physics_process(delta):
 
 
 func shoot():
-	const ARROW = preload("res://Scenes/arrow.tscn")
+	const ARROW = preload("res://Scenes/Player/arrow.tscn")
 	var new_arrow = ARROW.instantiate()
 	new_arrow.global_position = %ShootingPoint.global_position
 	new_arrow.global_rotation = %ShootingPoint.global_rotation

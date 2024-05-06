@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Scripts/world.gd" id="1_abiif"]
 [ext_resource type="Texture2D" uid="uid://bynskkgvs35ir" path="res://Assets/Pixel Crawler - FREE - 1.8/Environment/Green Woods/Assets/Tiles.png" id="2_6ngu6"]
-[ext_resource type="PackedScene" uid="uid://bthkr3rxuqb7t" path="res://Scenes/player.tscn" id="3_0yp7n"]
+[ext_resource type="PackedScene" uid="uid://bthkr3rxuqb7t" path="res://Scenes/Player/player.tscn" id="3_0yp7n"]
 [ext_resource type="PackedScene" uid="uid://cdc8yqx7oiuem" path="res://Scenes/World/Trees/large_tree.tscn" id="4_3pvmh"]
 [ext_resource type="PackedScene" uid="uid://duc4mevnnped3" path="res://Scenes/World/Trees/small_tree.tscn" id="5_oyd6u"]
 [ext_resource type="PackedScene" uid="uid://c5hubgeuqr16e" path="res://Scenes/World/Trees/medium_tree.tscn" id="6_2ghcb"]

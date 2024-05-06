@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://cdc8yqx7oiuem" path="res://Scenes/World/Trees/large_tree.tscn" id="3_kgs0l"]
 [ext_resource type="PackedScene" uid="uid://duc4mevnnped3" path="res://Scenes/World/Trees/small_tree.tscn" id="4_e5276"]
 [ext_resource type="PackedScene" uid="uid://c5hubgeuqr16e" path="res://Scenes/World/Trees/medium_tree.tscn" id="5_ggo57"]
-[ext_resource type="PackedScene" uid="uid://bthkr3rxuqb7t" path="res://Scenes/player.tscn" id="6_3mntr"]
+[ext_resource type="PackedScene" uid="uid://bthkr3rxuqb7t" path="res://Scenes/Player/player.tscn" id="6_3mntr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8grwi"]
 texture = ExtResource("2_a1ll1")
