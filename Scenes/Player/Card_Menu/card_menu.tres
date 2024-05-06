@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="Card_Menu" load_steps=2 format=3 uid="uid://d2c0no7b723q2"]
+
+[ext_resource type="Script" path="res://Scenes/Player/Card_Menu/card_menu.gd" id="1_0y3lo"]
+
+[resource]
+script = ExtResource("1_0y3lo")
+cards = Array[Resource("res://Scenes/Player/Card_Menu/Card/card.gd")]([])

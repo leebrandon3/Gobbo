@@ -402,17 +402,19 @@ value = 100.0
 show_percentage = false
 script = ExtResource("7_vanm8")
 
-[node name="Label" type="Label" parent="Gobbo/Camera2D"]
+[node name="Death Text" type="Label" parent="Gobbo/Camera2D"]
+z_index = 10
 offset_left = -63.0
 offset_top = -139.0
 offset_right = 63.0
 offset_bottom = -116.0
 script = ExtResource("8_ooo6e")
 
-[node name="Label" type="Label" parent="Gobbo"]
+[node name="Health Text" type="Label" parent="Gobbo/Camera2D"]
+z_index = 10
 offset_left = -255.0
 offset_top = -101.0
-offset_right = -203.0
+offset_right = -199.0
 offset_bottom = -78.0
 text = "Health:"
 
@@ -425,10 +427,8 @@ autostart = true
 [node name="Small Tree3" parent="." instance=ExtResource("4_klgh5")]
 position = Vector2(-528, -64)
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
 [connection signal="death" from="Gobbo" to="." method="_on_gobbo_death"]
-[connection signal="death" from="Gobbo" to="Gobbo/Camera2D/Label" method="_on_gobbo_death"]
+[connection signal="death" from="Gobbo" to="Gobbo/Camera2D/Death Text" method="_on_gobbo_death"]
 [connection signal="health_updated" from="Gobbo" to="Gobbo/Camera2D/ProgressBar" method="_on_gobbo_health_updated"]
 [connection signal="timeout" from="Mob Timer" to="." method="mob_spawn_timeout"]
 [connection signal="timeout" from="Clock Timer" to="." method="clock_timeout"]
