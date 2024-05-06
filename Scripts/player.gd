@@ -6,10 +6,11 @@ signal death
 @onready var animated_sprite_2d = $AnimatedSprite2D
 @onready var bow = $Bow
 
-const MAX_HEALTH = 100.0
+var MAX_HEALTH = 100.0
 var current_health = 100.0
 const DAMAGE_RATE = 30.0
 var alive = true
+var regen = 0.01
 
 func _physics_process(delta):
 	if alive == true:
@@ -28,6 +29,12 @@ func _physics_process(delta):
 		
 		if  velocity.y != 0:
 			animated_sprite_2d.play("running")
+		
+		if current_health < MAX_HEALTH:
+			if (current_health + regen) <= MAX_HEALTH:
+				current_health += regen
+			else:
+				current_health = MAX_HEALTH
 	
 	var overlapping_mobs = %HurtBox.get_overlapping_bodies()
 	if overlapping_mobs.size() > 0:

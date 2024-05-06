@@ -6,7 +6,7 @@ extends CharacterBody2D
 #variable that defines the helath
 var health = 2
 
-
+var card_drop = preload("res://Scenes/Enemies/card_drop.tscn").instantiate()
 #plays the "walk animation"
 func play_walk_animation():
 	animated_sprite_2d.play("walk")
@@ -28,5 +28,7 @@ func take_damage():
 	health -= 1
 	if health == 0:
 		play_death_animation()
+		card_drop.global_position = global_position
+		add_sibling(card_drop)
 		queue_free()
  

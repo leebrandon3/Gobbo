@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://cdc8yqx7oiuem" path="res://Scenes/World/Trees/large_tree.tscn" id="3_61jda"]
 [ext_resource type="PackedScene" uid="uid://duc4mevnnped3" path="res://Scenes/World/Trees/small_tree.tscn" id="4_klgh5"]
 [ext_resource type="PackedScene" uid="uid://c5hubgeuqr16e" path="res://Scenes/World/Trees/medium_tree.tscn" id="5_jqtwd"]
-[ext_resource type="PackedScene" uid="uid://bthkr3rxuqb7t" path="res://Scenes/player.tscn" id="6_e1gwe"]
+[ext_resource type="PackedScene" uid="uid://bthkr3rxuqb7t" path="res://Scenes/Player/player.tscn" id="6_e1gwe"]
 [ext_resource type="Script" path="res://Scripts/ProgressBar.gd" id="7_vanm8"]
 [ext_resource type="Script" path="res://Scripts/Label.gd" id="8_ooo6e"]
 
