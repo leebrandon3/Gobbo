@@ -13,11 +13,13 @@ var current_health = 100.0
 const DAMAGE_RATE = 30.0
 var alive = true
 var regen = 0.01
+#adding speed variable to be updated for the card 
+var SPEED = 170
 
 func _physics_process(delta):
 	if alive == true:
 		var direction = Input.get_vector("move_left", "move_right", "move_up", "move_down")
-		velocity = direction * 170
+		velocity = direction * SPEED
 		move_and_slide()
 
 		if velocity.length() == 0:

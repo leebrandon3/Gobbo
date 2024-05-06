@@ -10,3 +10,4 @@ func _on_body_entered(body):
 	gobbo.collect(HEALTH)
 	print(gobbo.MAX_HEALTH)
 	queue_free()
+	
