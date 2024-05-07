@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Card" load_steps=3 format=3 uid="uid://b5pp1gwcx1e5h"]
+
+[ext_resource type="Script" path="res://Scenes/Player/Card_Menu/Card/card.gd" id="1_78x3l"]
+[ext_resource type="Texture2D" uid="uid://csmybrblunif2" path="res://Assets/Cards/Fire_Rate_Card.png" id="2_ofe8f"]
+
+[resource]
+script = ExtResource("1_78x3l")
+name = "fire_rate"
+texture = ExtResource("2_ofe8f")
+amount = 0
