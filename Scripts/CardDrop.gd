@@ -4,6 +4,8 @@ extends Node2D
 @export var health: Card
 @export var speed: Card
 @export var fire_rate: Card
+func _ready():
+	randomize()
 
 var all_cards = [health, speed, fire_rate]
 
