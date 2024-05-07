@@ -24,6 +24,7 @@ position = Vector2(384, 280)
 texture = ExtResource("2_70m1h")
 
 [node name="GridContainer" type="GridContainer" parent="."]
+custom_minimum_size = Vector2(512, 468)
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -42,13 +43,21 @@ columns = 3
 layout_mode = 2
 
 [node name="CardSlotUi2" parent="GridContainer" instance=ExtResource("3_lber8")]
+layout_direction = 2
 layout_mode = 2
 
 [node name="CardSlotUi3" parent="GridContainer" instance=ExtResource("3_lber8")]
+layout_direction = 2
 layout_mode = 2
 
 [node name="CardSlotUi4" parent="GridContainer" instance=ExtResource("3_lber8")]
+layout_direction = 2
 layout_mode = 2
 
 [node name="CardSlotUi5" parent="GridContainer" instance=ExtResource("3_lber8")]
+layout_direction = 2
+layout_mode = 2
+
+[node name="CardSlotUi6" parent="GridContainer" instance=ExtResource("3_lber8")]
+layout_direction = 2
 layout_mode = 2
