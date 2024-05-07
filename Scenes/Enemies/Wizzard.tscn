@@ -1,0 +1,120 @@
+[gd_scene load_steps=18 format=3 uid="uid://cr42v8ynntmnv"]
+
+[ext_resource type="Script" path="res://Scripts/Wizzard.gd" id="1_ei17i"]
+[ext_resource type="Texture2D" uid="uid://bfpjtwrg7c1jx" path="res://Assets/Pixel Crawler - FREE - 1.8/Heroes/Wizzard/Death/Death-Sheet.png" id="2_ev4u8"]
+[ext_resource type="Texture2D" uid="uid://drtaj5yvej7p8" path="res://Assets/Pixel Crawler - FREE - 1.8/Heroes/Wizzard/Run-Sheet.png" id="2_pd38c"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h7yqj"]
+atlas = ExtResource("2_ev4u8")
+region = Rect2(0, 0, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_buxya"]
+atlas = ExtResource("2_ev4u8")
+region = Rect2(64, 0, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m0qrw"]
+atlas = ExtResource("2_ev4u8")
+region = Rect2(128, 0, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fksb2"]
+atlas = ExtResource("2_ev4u8")
+region = Rect2(192, 0, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nhfyv"]
+atlas = ExtResource("2_ev4u8")
+region = Rect2(256, 0, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i6cp3"]
+atlas = ExtResource("2_ev4u8")
+region = Rect2(320, 0, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ihbuf"]
+atlas = ExtResource("2_pd38c")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a00og"]
+atlas = ExtResource("2_pd38c")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aknus"]
+atlas = ExtResource("2_pd38c")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3hxri"]
+atlas = ExtResource("2_pd38c")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v1ysr"]
+atlas = ExtResource("2_pd38c")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0ok6j"]
+atlas = ExtResource("2_pd38c")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_aeqqu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h7yqj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_buxya")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m0qrw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fksb2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nhfyv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i6cp3")
+}],
+"loop": true,
+"name": &"death",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ihbuf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a00og")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aknus")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3hxri")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v1ysr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0ok6j")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_upjm4"]
+height = 64.0
+
+[node name="Wizzard" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 3
+script = ExtResource("1_ei17i")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(10, -0.937502)
+scale = Vector2(1, 2.06641)
+sprite_frames = SubResource("SpriteFrames_aeqqu")
+animation = &"death"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-5, -3)
+shape = SubResource("CapsuleShape2D_upjm4")
