@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Card" load_steps=3 format=3 uid="uid://d1888x3iyesgo"]
+
+[ext_resource type="Script" path="res://Scenes/Player/Card_Menu/Card/card.gd" id="1_7pd1n"]
+[ext_resource type="Texture2D" uid="uid://b2p10sb34tp8a" path="res://Assets/Cards/Speed Card PNG.png" id="2_rhurt"]
+
+[resource]
+script = ExtResource("1_7pd1n")
+name = "Speed"
+texture = ExtResource("2_rhurt")
+amount = 0

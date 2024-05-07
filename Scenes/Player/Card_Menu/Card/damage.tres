@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Card" load_steps=3 format=3 uid="uid://c8o3nfhsqkgvl"]
+
+[ext_resource type="Script" path="res://Scenes/Player/Card_Menu/Card/card.gd" id="1_43y12"]
+[ext_resource type="Texture2D" uid="uid://c5enmtvk3cvji" path="res://Assets/Cards/Damage Card PNG.png" id="2_nu5yb"]
+
+[resource]
+script = ExtResource("1_43y12")
+name = "damage"
+texture = ExtResource("2_nu5yb")
+amount = 0

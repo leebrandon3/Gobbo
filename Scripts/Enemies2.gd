@@ -26,11 +26,12 @@ func _physics_process(delta):
 		queue_free()
 		#play_death_animation()
 		#is_dead = true
+    card_drop.global_position = global_position
+	  add_sibling(card_drop)
 	
 func take_damage():
 	health -= 1
-	card_drop.global_position = global_position
-	add_sibling(card_drop)
+	
 	
 #func _on_animated_sprite_2d_animation_finished():
 	#print("finished")

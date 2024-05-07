@@ -1,7 +1,10 @@
-[gd_resource type="Resource" script_class="Card" load_steps=2 format=3 uid="uid://b4ied0vlt8j57"]
+[gd_resource type="Resource" script_class="Card" load_steps=3 format=3 uid="uid://b4ied0vlt8j57"]
 
 [ext_resource type="Script" path="res://Scenes/Player/Card_Menu/Card/card.gd" id="1_sym4e"]
+[ext_resource type="Texture2D" uid="uid://cgyh1wnifjyke" path="res://Assets/Cards/Health Card PNG.png" id="2_0035y"]
 
 [resource]
 script = ExtResource("1_sym4e")
 name = "Health"
+texture = ExtResource("2_0035y")
+amount = 0

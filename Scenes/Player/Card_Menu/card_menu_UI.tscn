@@ -1,9 +1,62 @@
-[gd_scene format=3 uid="uid://cw0a3qnmemxl0"]
+[gd_scene load_steps=4 format=3 uid="uid://cw0a3qnmemxl0"]
+
+[ext_resource type="Script" path="res://Scenes/Player/Card_Menu/card_menu_UI.gd" id="1_wnqmy"]
+[ext_resource type="Texture2D" uid="uid://co06ijs143ewx" path="res://Assets/Free Paper UI System/1 Sprites/Book Desk/4.png" id="2_70m1h"]
+[ext_resource type="PackedScene" uid="uid://bld07cmmiqxbi" path="res://Scenes/Player/Card_Menu/card_slot_UI.tscn" id="3_lber8"]
 
 [node name="CardMenuUi" type="Control"]
 layout_mode = 3
-anchors_preset = 15
+anchor_left = 0.167
+anchor_top = 0.204
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -192.384
+offset_top = -132.192
+offset_right = -384.0
+offset_bottom = -120.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1_wnqmy")
+
+[node name="desk" type="Sprite2D" parent="."]
+position = Vector2(384, 280)
+texture = ExtResource("2_70m1h")
+
+[node name="GridContainer" type="GridContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -214.0
+offset_top = -184.0
+offset_right = 214.0
+offset_bottom = 170.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 3
+
+[node name="CardSlotUi" parent="GridContainer" instance=ExtResource("3_lber8")]
+layout_mode = 2
+
+[node name="CardSlotUi2" parent="GridContainer" instance=ExtResource("3_lber8")]
+layout_direction = 2
+layout_mode = 2
+
+[node name="CardSlotUi3" parent="GridContainer" instance=ExtResource("3_lber8")]
+layout_direction = 2
+layout_mode = 2
+
+[node name="CardSlotUi4" parent="GridContainer" instance=ExtResource("3_lber8")]
+layout_direction = 2
+layout_mode = 2
+
+[node name="CardSlotUi5" parent="GridContainer" instance=ExtResource("3_lber8")]
+layout_direction = 2
+layout_mode = 2
+
+[node name="CardSlotUi6" parent="GridContainer" instance=ExtResource("3_lber8")]
+layout_direction = 2
+layout_mode = 2

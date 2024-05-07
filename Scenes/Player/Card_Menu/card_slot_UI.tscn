@@ -1,0 +1,56 @@
+[gd_scene load_steps=2 format=3 uid="uid://bld07cmmiqxbi"]
+
+[ext_resource type="Script" path="res://Scripts/card_slot_UI.gd" id="1_k28hl"]
+
+[node name="Control" type="Control"]
+custom_minimum_size = Vector2(140, 168)
+layout_mode = 3
+anchor_right = 0.122
+anchor_bottom = 0.259
+offset_right = -0.54401
+offset_bottom = 0.167998
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_k28hl")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+custom_minimum_size = Vector2(140, 168)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -70.0
+offset_top = -84.0
+offset_right = 70.0
+offset_bottom = 84.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="CardSlotUi" type="Panel" parent="MarginContainer"]
+self_modulate = Color(1, 1, 1, 0.568627)
+custom_minimum_size = Vector2(2.08165e-12, 2.08165e-12)
+layout_mode = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="MarginContainer/CenterContainer"]
+layout_mode = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="MarginContainer/CenterContainer/Panel"]
+position = Vector2(2.08165e-12, 2.08165e-12)
+
+[node name="Amount" type="Label" parent="."]
+layout_mode = 2
+offset_left = 24.0
+offset_top = 152.0
+offset_right = 120.0
+offset_bottom = 175.0
+text = "test"
+horizontal_alignment = 1
