@@ -1,13 +1,15 @@
 extends Node2D
 
 @onready var gobbo = get_node('/root/World/Gobbo')
+@export var health: Card
+@export var speed: Card
+@export var fire_rate: Card
 
-const HEALTH = preload("res://Scenes/Player/Card_Menu/Card/health.tres")
+
+var all_cards = [health, speed, fire_rate]
 
 func _on_body_entered(body):
-	gobbo.MAX_HEALTH += 5
-	gobbo.current_health += 5
-	gobbo.collect(HEALTH)
-	print(gobbo.MAX_HEALTH)
+	var random_card = all_cards[randi() & all_cards.size()]
+	#if random_card == speed:
 	queue_free()
 	
