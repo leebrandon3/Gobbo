@@ -5,7 +5,6 @@ extends Node2D
 @export var speed: Card
 @export var fire_rate: Card
 
-
 var all_cards = [health, speed, fire_rate]
 
 func _on_body_entered(body):

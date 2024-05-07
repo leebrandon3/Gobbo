@@ -13,7 +13,7 @@ var current_health = 100.0
 const DAMAGE_RATE = 30.0
 var alive = true
 var regen = 0.01
-#adding speed variable to be updated for the card 
+#adding a default speed variable to be updated for when you pick up the speed card 
 var SPEED = 170
 
 func _physics_process(delta):
