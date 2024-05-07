@@ -1,6 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://dfrr4aas11880"]
-
-[ext_resource type="Script" path="res://Scripts/dmg_buff.gd" id="1_fqo5g"]
-
-[node name="dmg_buff" type="Node2D"]
-script = ExtResource("1_fqo5g")

@@ -50,7 +50,7 @@ extends CharacterBody2D
 var health = 100.0
 var direction
 var is_dead = false
-var DAMAGE_RATE = 35
+var DAMAGE_RATE = 50
 
 
 var card_drop = preload("res://Scenes/Enemies/card_drop.tscn").instantiate()
@@ -81,6 +81,8 @@ func _physics_process(delta):
 func take_damage():
 	health -= DAMAGE_RATE
 	print(health)
+	
+#moved this 
 	#card_drop.global_position = global_position
 	#add_sibling(card_drop)
 	#if health == 0:
