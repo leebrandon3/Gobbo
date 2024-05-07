@@ -1,6 +1,7 @@
 extends Node2D
 
 @onready var gobbo = get_node('/root/World/Gobbo')
+@onready var knight = get_node("res://Scenes/Enemies/")
 
 const HEALTH = preload("res://Scenes/Player/Card_Menu/Card/health.tres")
 
