@@ -22,10 +22,12 @@ func _physics_process(delta):
 		play_walk_animation()
 	elif is_dead == true:
 		velocity = direction * 0.0
+
 	if health <= 0: 
 		
 		#play_death_animation()
 		#is_dead = true
+
 		card_drop.global_position = global_position
 		add_sibling(card_drop)
 		queue_free()

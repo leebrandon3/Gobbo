@@ -2,7 +2,8 @@
 
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
-uid="uid://c70xfy72rcyh3"
+uid="uid://b8lgpqv6gnae"
+
 path="res://.godot/imported/Three Red Hearts - Box Jump.ogg-66f26b19d4873d1b25066e433f2aa30f.oggvorbisstr"
 
 [deps]
@@ -12,7 +13,7 @@ dest_files=["res://.godot/imported/Three Red Hearts - Box Jump.ogg-66f26b19d4873
 
 [params]
 
-loop=false
+loop=true
 loop_offset=0
 bpm=0
 beat_count=0
