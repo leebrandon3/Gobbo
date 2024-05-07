@@ -1,17 +1,35 @@
 [gd_scene format=3 uid="uid://bld07cmmiqxbi"]
 
-[node name="MarginContainer" type="MarginContainer"]
-anchors_preset = -1
+[node name="Control" type="Control"]
+custom_minimum_size = Vector2(168, 232)
+layout_mode = 3
 anchor_right = 0.146
 anchor_bottom = 0.358
-offset_right = -128.192
-offset_bottom = -191.984
+offset_right = -0.192015
+offset_bottom = 0.0159934
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -225.024
+offset_bottom = -306.928
 theme_override_constants/margin_left = 20
 theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 20
 
-[node name="CardSlotUi" type="Panel" parent="."]
+[node name="CardSlotUi" type="Panel" parent="MarginContainer"]
 self_modulate = Color(1, 1, 1, 0.568627)
 custom_minimum_size = Vector2(128, 192)
 layout_mode = 2
+
+[node name="Amount" type="Label" parent="."]
+layout_mode = 2
+offset_left = 20.0
+offset_top = 212.0
+offset_right = 148.0
+offset_bottom = 235.0
+text = "test"
+horizontal_alignment = 1

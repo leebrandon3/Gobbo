@@ -25,14 +25,18 @@ func _physics_process(delta):
 	if health == 0: 
 		play_death_animation()
 		is_dead = true
+		card_drop.global_position = global_position
+		add_sibling(card_drop)
 	
 func take_damage():
 	health -= 1
-	card_drop.globala_position = global_position
-	add_sibling(card_drop)
 		
 func _on_animated_sprite_2d_animation_finished():
-	print("finished")
+	print("finished stephs animation")
 	if is_dead == true:
 		queue_free()
 		print("died")
+
+
+func _on_animation_finished():
+	print("finished animation")
