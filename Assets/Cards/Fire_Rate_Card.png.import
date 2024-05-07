@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://drtaj5yvej7p8"
-path="res://.godot/imported/Run-Sheet.png-39783b23f8bf53423d98674dde6e6b4d.ctex"
+uid="uid://csmybrblunif2"
+path="res://.godot/imported/Fire_Rate_Card.png-d4c220e46cd0f3a76ed0deea34f4321c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Pixel Crawler - FREE - 1.8/Heroes/Wizzard/Run/Run-Sheet.png"
-dest_files=["res://.godot/imported/Run-Sheet.png-39783b23f8bf53423d98674dde6e6b4d.ctex"]
+source_file="res://Assets/Cards/Fire_Rate_Card.png"
+dest_files=["res://.godot/imported/Fire_Rate_Card.png-d4c220e46cd0f3a76ed0deea34f4321c.ctex"]
 
 [params]
 

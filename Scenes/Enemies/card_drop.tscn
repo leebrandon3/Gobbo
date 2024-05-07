@@ -1,13 +1,19 @@
-[gd_scene load_steps=4 format=3 uid="uid://bgmvxfqcyss2b"]
+[gd_scene load_steps=7 format=3 uid="uid://bgmvxfqcyss2b"]
 
 [ext_resource type="Texture2D" uid="uid://cjqe2n4af5udg" path="res://Assets/Kyrise's 16x16 RPG Icon Pack - V1.3/icons/16x16/scroll_01a.png" id="1_nw0g4"]
 [ext_resource type="Script" path="res://Scripts/CardDrop.gd" id="2_r6nim"]
+[ext_resource type="Resource" uid="uid://b4ied0vlt8j57" path="res://Scenes/Player/Card_Menu/Card/health.tres" id="2_x2vlu"]
+[ext_resource type="Resource" uid="uid://d1888x3iyesgo" path="res://Scenes/Player/Card_Menu/Card/speed.tres" id="3_gvj4r"]
+[ext_resource type="Resource" uid="uid://b5pp1gwcx1e5h" path="res://Scenes/Player/Card_Menu/Card/fire_rate.tres" id="4_4e0aw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n67of"]
 size = Vector2(18.3848, 10.6066)
 
 [node name="CardDrop" type="Node2D"]
 script = ExtResource("2_r6nim")
+health = ExtResource("2_x2vlu")
+speed = ExtResource("3_gvj4r")
+fire_rate = ExtResource("4_4e0aw")
 
 [node name="Scroll" type="Sprite2D" parent="."]
 texture = ExtResource("1_nw0g4")
