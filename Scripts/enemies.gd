@@ -72,15 +72,18 @@ func _physics_process(delta):
 		velocity = direction * 0.0
 #cahnge health == 0 to health <= 0 to queue free even if health is less than zero
 	if health <= 0:
-		play_death_animation()
+		#play_death_animation()
 		is_dead = true
+		card_drop.global_position = global_position
+		add_sibling(card_drop)
+		queue_free()
 	
 #this function uses the health variable declaried above and sets it 
 #to  -1 once its called if health goes to 0 we play death animation 
 #and call queue_free
 func take_damage():
 	health -= DAMAGE_RATE
-	print(health)
+	#print(health)
 	
 #moved this 
 	#card_drop.global_position = global_position
@@ -98,4 +101,4 @@ func _on_animated_sprite_2d_animation_finished():
 		queue_free()
 		card_drop.global_position = global_position
 		add_sibling(card_drop)
-		print("died")
+		#print("died")

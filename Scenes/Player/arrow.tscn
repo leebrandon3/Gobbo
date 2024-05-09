@@ -8,18 +8,17 @@ size = Vector2(22, 8)
 
 [node name="Arrow" type="Area2D"]
 top_level = true
-rotation = 6.22579
+rotation = 6.24834
 scale = Vector2(0.742469, 0.804854)
 collision_layer = 0
 collision_mask = 2
 script = ExtResource("1_nlmsl")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(2, 2)
 shape = SubResource("RectangleShape2D_7x27k")
 
 [node name="Arrow01e" type="Sprite2D" parent="."]
-position = Vector2(1, 2)
+position = Vector2(-1.34464, -0.0712723)
 rotation = 2.38114
 texture = ExtResource("2_rrle7")
 

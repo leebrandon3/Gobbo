@@ -4,11 +4,13 @@ extends Control
 @onready var amount = $Amount
 
 
-func update(card: Card):
-	if !card:
+func update(slot: CardSlot):
+	if !slot:
 		card_visual.visible = false
+		amount.visible = false
 	else:
 		card_visual.visible = true
-		card_visual.texture = card.texture
-		amount.text = str(card.amount)
-	
+		if slot.card:
+			card_visual.texture = slot.card.texture
+		amount.visible = true
+		amount.text = str(slot.amount)
