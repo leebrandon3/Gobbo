@@ -17,7 +17,7 @@ func play_death_animation():
 func _physics_process(delta):
 	if is_dead == false:	
 		direction = global_position.direction_to(player.global_position)
-		velocity = direction * 40.0
+		velocity = direction * 100.0
 		move_and_slide()
 		play_walk_animation()
 	elif is_dead == true:
