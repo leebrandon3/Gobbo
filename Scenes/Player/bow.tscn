@@ -29,6 +29,7 @@ position = Vector2(-2.39994, 3.38258)
 rotation = -0.768
 
 [node name="Timer" type="Timer" parent="."]
+unique_name_in_owner = true
 wait_time = 0.5
 autostart = true
 

@@ -2,15 +2,17 @@ extends Resource
 
 class_name Card_Menu
 
-@export var cards: Array[Card]
+@export var slots: Array[CardSlot]
 
-func insert(card):
-	var card_exists = false
-	for i in cards:
-		if cards[i].name.contains(card.name):
-			cards[i].amount += 1
-			card_exists = true
-			break
-	if card_exists == false:
-		cards.append(card)
-		
+signal update
+
+func insert(card: Card):
+	var card_slots = slots.filter(func(slot): return slot.card == card)
+	if !card_slots.is_empty():
+		card_slots[0].amount += 1
+	else:
+		var emptyslots = slots.filter(func(slot): return slot.card == null)
+		if !emptyslots.is_empty():
+			emptyslots[0].card = card
+			emptyslots[0].amount = 1
+	update.emit()

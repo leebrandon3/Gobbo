@@ -2,6 +2,12 @@ extends Area2D
 
 var travelled_distance = 0
 
+@onready var arrow_01e = $Arrow01e
+
+func _ready():
+	arrow_01e.flip_v = true
+	arrow_01e.flip_h = true
+
 func _physics_process(delta):
 	const SPEED = 240
 	const RANGE = 550

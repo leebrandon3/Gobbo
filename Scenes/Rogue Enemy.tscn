@@ -102,7 +102,7 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_a4edc"]
-radius = 15.6525
+radius = 6.08276
 
 [node name="Rogue Enemy" type="CharacterBody2D"]
 position = Vector2(0, -15)
@@ -111,12 +111,12 @@ collision_mask = 3
 script = ExtResource("1_3fl7f")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(-4.5, 11)
+position = Vector2(-2, -3)
 scale = Vector2(0.859375, 0.625)
 sprite_frames = SubResource("SpriteFrames_gkjch")
 animation = &"death"
 frame_progress = 0.667569
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-5, 21)
+position = Vector2(1, 1)
 shape = SubResource("CircleShape2D_a4edc")
